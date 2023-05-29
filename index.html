@@ -1,47 +1,45 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css.css">
-    <title>Crud</title>
+  <title>LOGIN</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <h1>Crud</h1>
-    <h2>Crear</h2>
-    <form id="crudForm">
-      <label for="RFC">RFC:</label>
-      <input type="text" id="rfc" required>
-  
-      <label for="Nombre">Nombre:</label>
-      <input type="text" id="nombre" required>
-  
-      <label for="ApellidoP">Apellido Paterno:</label>
-      <input type="text" id="apellidoP" required>
-  
-      <label for="ApellidoM">Apellido Materno:</label>
-      <input type="text" id="apellidoM" required>
-  
-      <label for="CedulaProfesional">Cedula Profesional:</label>
-      <input type="text" id="cedprof" required>
-  
-      <label for="Correo">Correo:</label>
-      <input type="text" id="correo" required>
-      
-      <label for="Contraseña">Contraseña:</label>
-      <input type="text" id="Contraseña" required>
-  
-      <label for="Rol">Rol:</label>
-      <div class="custom-select">
-      <select id="rol" name="rol">
-      <option value="1">Administrador</option>
-      <option value="2">Médico</option>
-      </select>
+  <div class="section">
+    <div class="container">
+      <div class="row full-height justify-content-center">
+        <div class="col-12 text-center align-self-center py-5">
+          <div class="section pb-5 pt-5 pt-sm-2 text-center">
+            <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
+            <div class="card-3d-wrap mx-auto">
+              <div class="card-3d-wrapper">
+                <div class="card-front">
+                  <div class="center-wrap">
+                    <div class="section text-center">
+                      <h4 class="mb-4 pb-3">Iniciar Sesión</h4>
+                      <div class="form-group">
+                        <input type="email" class="form-style" placeholder="Email">
+                        <i class="input-icon uil uil-at"></i>
+                      </div>
+                      <div class="form-group mt-2">
+                        <input type="password" class="form-style" placeholder="Contraseña">
+                        <i class="input-icon uil uil-lock-alt"></i>
+                        <a href="" class="btn mt-4">Entrar</a>
+                      <p class="mb-0 mt-4 text-center"><a href="" class="link">¿Olvidaste tu contraseña?</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-  
-  
-      <button type="submit">Guardar</button>
-    </form>
-  </body>
+    </div>
+  </div>
+</body>
 </html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminCrud</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .content {
+          display: none;
+        }
+      </style>
+    </head>
+    <body>
+      <header>
+        <nav>
+          <ul>
+            <li><a href="#" onclick="toggleContent('register')" class="color">Registrar</a></li>
+            <li><a href="#" onclick="toggleContent('consult')" class="color">Consultar</a></li>
+          </ul>
+        </nav>
+      </header>
+    
+      <div id="registerContent" class="content">
+        <div class="section">
+            <div class="container">
+                <div class="row full-height justify-content-center">
+                    <div class="col-12 text-center align-self-center py-5">
+                        <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                            <div class="card-3d-wrap mx-auto">
+                                <div class="card-3d-wrapper">
+                                    
+                                    <div class="card-front">
+                                        <div class="center-wrap">
+                                            <div class="section text-center">
+                                                <h4 class="mb-3 pb-3">Registrar</h4>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-style" placeholder="RFC">
+                                                    <i class="input-icon uil uil-user"></i>
+                                                </div>	
+                                                <div class="form-group mt-2">
+                                                    <input type="text" class="form-style" placeholder="Nombre">
+                                                    <i class="input-icon uil uil-user"></i>
+                                                </div>	
+                                                <div class="form-group mt-2">
+                                                    <input type="text" class="form-style" placeholder="Apellido Paterno">
+                                                    <i class="input-icon uil uil-user"></i>
+                                                </div>
+                                                <div class="form-group mt-2">
+                                                    <input type="text" class="form-style" placeholder="Apellido Materno">
+                                                    <i class="input-icon uil uil-user"></i>
+                                                </div>	
+                                                <div class="form-group mt-2">
+                                                    <input type="email" class="form-style" placeholder="Email">
+                                                    <i class="input-icon uil uil-at"></i>
+                                                </div>
+                                                <div class="form-group mt-2">
+                                                    <input type="password" class="form-style" placeholder="Password">
+                                                    <i class="input-icon uil uil-lock-alt"></i>
+                                                </div>
+                                                <label for="rol">Rol:</label>
+                                                <div class="form-group mt-2">
+                                                <select id="rol" name="rol">
+                                                    <option value="admin">Admin</option>
+                                                    <option value="medico">Médico</option>
+                                                </select>
+                                                </div>
+
+                                                <a href="" class="btn mt-5">Registrar</a>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
+      </div>
+    
+      <div id="consultContent" class="content">
+        <!-- Contenido para la consulta -->
+        <h2>Consultar</h2>
+      </div>
+    
+      <script>
+        function toggleContent(contentId) {
+          var content = document.getElementById(contentId + "Content");
+          var allContent = document.getElementsByClassName("content");
+    
+          // Ocultar todo el contenido
+          for (var i = 0; i < allContent.length; i++) {
+            allContent[i].style.display = "none";
+          }
+    
+          // Mostrar el contenido seleccionado
+          content.style.display = "block";
+        }
+      </script>
+    </body>
+</html>

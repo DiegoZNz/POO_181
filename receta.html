@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Pacientes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            line-height: 1.7;
+            color: #55d858;
+            background-color: #1f2029;
+        }
+        .exploration-section {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+        }
+        .exploration-section h2 {
+            margin-bottom: 10px;
+        }
+        .exploration-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+        .exploration-form label {
+            font-weight: 600;
+        }
+        .exploration-form input {
+            width: 100%;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #c4c3ca;
+        }
+        .exploration-form button {
+            padding: 5px 10px;
+            border-radius: 4px;
+            background-color: #55d858;
+            color: #000000;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .exploration-form button:hover {
+            background-color: #000000;
+            color: #55d858;
+        }
+        .diagnosis-section {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+        }
+        .diagnosis-section h2 {
+            margin-bottom: 10px;
+        }
+        .diagnosis-form label {
+            font-weight: 600;
+        }
+        .diagnosis-form textarea {
+            width: 100%;
+            height: 100px;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #c4c3ca;
+        }
+        .diagnosis-form button {
+            padding: 5px 10px;
+            border-radius: 4px;
+            background-color: #55d858;
+            color: #000000;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .diagnosis-form button:hover {
+            background-color: #000000;
+            color: #55d858;
+        }
+        .prescription-section {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+        }
+        .prescription-section h2 {
+            margin-bottom: 10px;
+        }
+        .prescription-form label {
+            font-weight: 600;
+        }
+        .prescription-form input, .prescription-form textarea {
+            width: 100%;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #c4c3ca;
+        }
+        .prescription-form button {
+            padding: 5px 10px;
+            border-radius: 4px;
+            background-color: #55d858;
+            color: #000000;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .prescription-form button:hover {
+            background-color: #000000;
+            color: #55d858;
+        }
+    </style>
+</head>
+<body>
+    <div class="exploration-section">
+        <h2>Exploración</h2>
+        <form class="exploration-form">
+            <div>
+                <label for="nombre-paciente">Nombre del Paciente:</label>
+                <input type="text" id="nombre-paciente" name="nombre-paciente">
+            </div>
+            <div>
+                <label for="nombre-medico">Nombre del Médico:</label>
+                <input type="text" id="nombre-medico" name="nombre-medico">
+            </div>
+            <div>
+                <label for="altura">Altura:</label>
+                <input type="text" id="altura" name="altura">
+            </div>
+            <div>
+                <label for="peso">Peso:</label>
+                <input type="text" id="peso" name="peso">
+            </div>
+            <div>
+                <label for="temperatura">Temperatura:</label>
+                <input type="text" id="temperatura" name="temperatura">
+            </div>
+            <div>
+                <label for="latidos-pm">Latidos por Minuto:</label>
+                <input type="text" id="latidos-pm" name="latidos-pm">
+            </div>
+            <div>
+                <label for="saturacion">Saturación:</label>
+                <input type="text" id="saturacion" name="saturacion">
+            </div>
+            <div>
+                <button type="submit">Guardar</button>
+                <button type="button">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="diagnosis-section">
+        <h2>Diagnóstico</h2>
+        <form class="diagnosis-form">
+            <div>
+                <label for="sintomas">Síntomas:</label>
+                <textarea id="sintomas" name="sintomas"></textarea>
+            </div>
+            <div>
+                <label for="diagnostico">Diagnóstico:</label>
+                <textarea id="diagnostico" name="diagnostico"></textarea>
+            </div>
+            <div>
+                <label for="tratamiento">Tratamiento:</label>
+                <textarea id="tratamiento" name="tratamiento"></textarea>
+            </div>
+            <div>
+                <button type="submit">Guardar</button>
+                <button type="button">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="prescription-section">
+        <h2>Receta</h2>
+        <form class="prescription-form">
+            <div>
+                <label for="nombre-paciente">Nombre del Paciente:</label>
+                <input type="text" id="nombre-paciente" name="nombre-paciente">
+            </div>
+            <div>
+                <label for="nombre-medico">Nombre del Médico:</label>
+                <input type="text" id="nombre-medico" name="nombre-medico">
+            </div>
+            <div>
+                <label for="tratamiento">Tratamiento:</label>
+                <textarea id="tratamiento" name="tratamiento"></textarea>
+            </div>
+            <div>
+                <label for="medicamentos">Medicamentos:</label>
+                <textarea id="medicamentos" name="medicamentos"></textarea>
+            </div>
+            <div>
+                <label for="fecha-receta">Fecha de la Receta:</label>
+                <input type="text" id="fecha-receta" name="fecha-receta">
+            </div>
+            <div>
+                <button type="submit">Guardar</button>
+                <button type="button">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

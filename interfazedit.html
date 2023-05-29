@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Pacientes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            line-height: 1.7;
+            color: #55d858;
+            background-color: #1f2029;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #c4c3ca;
+        }
+        .options-btn {
+            padding: 5px 10px;
+            border-radius: 4px;
+            background-color: #55d858;
+            color: #000000;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .options-btn:hover {
+            background-color: #000000;
+            color: #55d858;
+        }
+    </style>
+</head>
+<body>
+    <h2>Consulta de Pacientes</h2>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Enfermedades Crónicas</th>
+            <th>Alergias</th>
+            <th>Antecedentes Familiares</th>
+            <th>Opciones</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>Smith</td>
+            <td>01/01/1990</td>
+            <td>Diabetes</td>
+            <td>Pollen</td>
+            <td>None</td>
+            <td>
+                <button class="options-btn">Actualizar</button>
+                <button class="options-btn">Eliminar</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>Johnson</td>
+            <td>Doe</td>
+            <td>05/15/1985</td>
+            <td>Asthma</td>
+            <td>Penicillin</td>
+            <td>Heart disease</td>
+            <td>
+                <button class="options-btn">Actualizar</button>
+                <button class="options-btn">Eliminar</button>
+            </td>
+        </tr>
+        <!-- Agrega más filas según la cantidad de pacientes registrados -->
+    </table>
+    
+    <h2>Actualizar Paciente</h2>
+    <form>
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+        </div>
+        <div>
+            <label for="apellidoPaterno">Apellido Paterno:</label>
+            <input type="text" id="apellidoPaterno" name="apellidoPaterno">
+        </div>
+        <div>
+            <label for="apellidoMaterno">Apellido Materno:</label>
+            <input type="text" id="apellidoMaterno" name="apellidoMaterno">
+        </div>
+        <div>
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+        </div>
+        <div>
+            <label for="enfermedades">Enfermedades Crónicas:</label>
+            <input type="text" id="enfermedades" name="enfermedades">
+        </div>
+        <div>
+            <label for="alergias">Alergias:</label>
+            <input type="text" id="alergias" name="alergias">
+        </div>
+        <div>
+            <label for="antecedentes">Antecedentes Familiares:</label>
+            <input type="text" id="antecedentes" name="antecedentes">
+        </div>
+        <div>
+            <button class="options-btn">Actualizar</button>
+            <button class="options-btn">Cancelar</button>
+        </div>
+    </form>
+</body>
+</html>

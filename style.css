@@ -1,0 +1,24 @@
+header {
+  background-color: #848484;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  margin-right: 100px;
+}
+
+a {
+  text-decoration: none;
+  padding: 20px;
+}
+.color{
+  color: #F7E7A2;
+}
+

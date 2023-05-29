@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Consulta de Médicos</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      color: #ffeba7;
+      background-color: #1f2029;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #c4c3ca;
+    }
+    .options-btn {
+      padding: 5px 10px;
+      border-radius: 4px;
+      background-color: #ffeba7;
+      color: #000000;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .options-btn:hover {
+      background-color: #000000;
+      color: #ffeba7;
+    }
+  </style>
+</head>
+<body>
+  <h2>Consulta de Médicos</h2>
+  <table>
+    <tr>
+      <th>RFC</th>
+      <th>Nombre</th>
+      <th>Apellido Paterno</th>
+      <th>Apellido Materno</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Rol</th>
+      <th>Opciones</th>
+    </tr>
+    <tr>
+      <td>1234567890</td>
+      <td>Juan</td>
+      <td>Pérez</td>
+      <td>Gómez</td>
+      <td>juan@example.com</td>
+      <td>********</td>
+      <td>Médico General</td>
+      <td>
+        <button class="options-btn">Actualizar</button>
+        <button class="options-btn">Eliminar</button>
+      </td>
+    </tr>
+    <tr>
+      <td>9876543210</td>
+      <td>María</td>
+      <td>López</td>
+      <td>Rodríguez</td>
+      <td>maria@example.com</td>
+      <td>********</td>
+      <td>Especialista</td>
+      <td>
+        <button class="options-btn">Actualizar</button>
+        <button class="options-btn">Eliminar</button>
+      </td>
+    </tr>
+    <!-- Agrega más filas según los datos de tus médicos registrados -->
+  </table>
+</body>
+</html>
