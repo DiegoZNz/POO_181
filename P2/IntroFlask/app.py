@@ -12,7 +12,16 @@ mysql = MySQL(app)
 #declaración de la ruta http://localhost:5000
 @app.route('/')#ruta index o raiz, busca el método index y regresa un hola mundo.
 def index():
-    return "HOLA MUNDO FLASK"
+        # Ejecutar una consulta SQL simple
+    cursor = mysql.connection.cursor()
+    cursor.execute("SELECT 1")
+    result = cursor.fetchone()
+
+    if result:
+        return "HOLA MUNDO FLASK"
+    else:
+        return "No se pudo conectar a la base de datos"
+
 #creacion de nuevas rutas y para acceder a ellas solamente es escribir el /ruta en el navegador
 #después de el localhost
 @app.route('/guardar')
