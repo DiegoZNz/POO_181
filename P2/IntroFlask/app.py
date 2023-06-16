@@ -1,5 +1,5 @@
 #aquí se importa el framework 
-from flask import Flask
+from flask import Flask,render_template, request
 from flask_mysqldb import MySQL
 #inicialización del APP
 app = Flask(__name__)
@@ -18,15 +18,26 @@ def index():
     result = cursor.fetchone()
 
     if result:
-        return "HOLA MUNDO FLASK"
+        return render_template('index.html')
     else:
         return "No se pudo conectar a la base de datos"
 
 #creacion de nuevas rutas y para acceder a ellas solamente es escribir el /ruta en el navegador
 #después de el localhost
-@app.route('/guardar')
+
+
+@app.route('/guardar', methods=['POST'])
 def guardar():
-    return "Se guardo en el BD"
+    if request.method == 'POST':
+        titulo = request.form['txtTitulo']
+        artista = request.form['txtArtista']
+        año = request.form['txtAnio']
+        
+        print(titulo,artista,año)
+        
+    return "los datos llegaron"
+
+
 @app.route('/eliminar')
 def eliminar():
     return "Se elimino en el BD"
