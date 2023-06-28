@@ -15,13 +15,17 @@ app.secret_key = "mi_clave_secreta"
 #declaración de la ruta http://localhost:5000
 @app.route('/')#ruta index o raiz, busca el método index y regresa un hola mundo.
 def index():
-        # Ejecutar una consulta SQL simple
+    #creamos un cursor y le decimos que ejecute la consulta para traer todos los albums y que los guarde en QueryAlbums
+    #con la funcion fetchall y los imprimimos en la consola por el momento
     cursor = mysql.connection.cursor()
+    cursor.execute("Select * from tbalbums")
+    QueryAlbums = cursor.fetchall()
+    
     cursor.execute("SELECT 1")
     result = cursor.fetchone()
 
     if result:
-        return render_template('index.html')
+        return render_template('index.html',listAlbums = QueryAlbums)
     else:
         return "No se pudo conectar a la base de datos"
 

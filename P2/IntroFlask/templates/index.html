@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <title>CRUD Albums</title>
 </head>
 <body>
@@ -24,8 +26,35 @@
         <input type="text" name="txtArtista" placeholder="Escribe el nombre del artista">
         <input type="number" name="txtAnio" placeholder="Escribe el año">
         <button type="submit">Guardar</button>
-
-
     </form>
+
+    <br>
+    <br>
+    <h1>Albums guardados</h1>
+    <table>
+        <thead>
+          <tr>
+            <th>Id:</th>
+            <th>Album:</th>
+            <th>Artista:</th>
+            <th>Año de publicación:</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for album in listAlbums %}
+          <tr>
+            <td>{{ album[0] }}</td>
+            <td>{{ album[1] }}</td>
+            <td>{{ album[2] }}</td>
+            <td>{{ album[3] }}</td>
+            <td>
+                <a href="">Editar</a>
+                <a href="">Borrar</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
 </body>
 </html>
