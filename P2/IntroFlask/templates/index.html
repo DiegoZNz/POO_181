@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
     <title>CRUD Albums</title>
 </head>
 <body>
@@ -44,12 +43,12 @@
         <tbody>
           {% for album in listAlbums %}
           <tr>
-            <td>{{ album[0] }}</td>
-            <td>{{ album[1] }}</td>
-            <td>{{ album[2] }}</td>
-            <td>{{ album[3] }}</td>
+            <td>{{album[0]}}</td>
+            <td>{{album[1]}}</td>
+            <td>{{album[2]}}</td>
+            <td>{{album[3]}}</td>
             <td>
-                <a href="">Editar</a>
+                <a href="/edit/{{album[0]}}">Editar</a>
                 <a href="">Borrar</a>
             </td>
           </tr>
