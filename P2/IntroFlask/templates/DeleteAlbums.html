@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <title>CRUD Albums</title>
+</head>
+<body>
+    <br>
+    <br>
+    <h1>Album a Borrar</h1>
+    <br>
+    <form action="/delete/{{listIdDlt[0]}}" method="POST">
+        <input type="text" name="txtTitulo" value="{{listIdDlt[1]}}">
+        <input type="text" name="txtArtista" value="{{listIdDlt[2]}}">
+        <p>Seguro que quieres borrar</p>
+        <input type="number" name="txtAnio" value="{{listIdDlt[3]}}">
+        <button type="submit" name="action" value="delete">Borrar</button>
+        <button type="submit" name="action" value="cancel">Cancelar</button>
+    </form>
+
+    <br>
+   
+</body>
+</html>

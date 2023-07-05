@@ -58,12 +58,38 @@ def edit(id):
 
 @app.route('/update/<id>', methods=['POST'])
 def update(id):
-    return "Se elimino en el BD"
+    if request.method == 'POST':
+        varTitulo = request.form['txtTitulo']
+        varArtista = request.form['txtArtista']
+        varAnio = request.form['txtAnio']
+        UpdCur = mysql.connection.cursor()
+        UpdCur.execute('Update tbalbums set Titulo =%s, Artista = %s, Anio = %s where id = %s', (varTitulo, varArtista, varAnio, id))
+        mysql.connection.commit()
+    flash('El album fue actualizado correctamente')
+    return redirect(url_for('index'))
 
+@app.route('/edit2/<id>')
+def edit2(id):
+    CS = mysql.connection.cursor()
+    CS.execute('Select * from tbalbums where id = %s',(id,))
+    QueryId = CS.fetchone()
+    print (QueryId)
+    return render_template('DeleteAlbums.html',listIdDlt = QueryId)
 
-@app.route('/eliminar')
-def eliminar():
-    return "Se elimino en el BD"
+@app.route('/delete/<id>', methods=['POST'])
+def delete(id):
+    if request.method == 'POST':
+        if request.form.get('action') == 'delete':
+            varTitulo = request.form['txtTitulo']
+            varArtista = request.form['txtArtista']
+            varAnio = request.form['txtAnio']
+            UpdCur = mysql.connection.cursor()
+            UpdCur.execute('delete from tbalbums where id = %s', (id,))
+            mysql.connection.commit()
+            flash('El album fue borrado correctamente')
+        elif request.form.get('action') == 'cancel':
+            flash('Borrado cancelado')
+    return redirect(url_for('index'))
 
 #ejecución del servidor 
 if __name__ =='__main__':
