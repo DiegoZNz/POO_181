@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Frutas</title>
+</head>
+<body>
+    <a href="/mostrar">Volver</a>
+    <h1>Consulta de Frutas</h1>
+    <form action="/mostrarSN" method="POST">
+        <input type="text" name="txtFruta" placeholder="Fruta" required>
+        <button type="submit">BUSCAR</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Fruta</th>
+                <th>Temporada</th>
+                <th>Precio</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for fruta in resultados %}
+            <tr>
+                <td>{{ fruta[1] }}</td>
+                <td>{{ fruta[2] }}</td>
+                <td>{{ fruta[3] }}</td>
+                <td>{{ fruta[4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

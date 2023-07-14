@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <title>delete frutas</title>
+</head>
+<body>
+   
+    <br>
+    <br>
+    <h1>delete frutas</h1>
+    <br>
+    <form action="/delete/{{listIdDlt[0]}}" method="POST">
+        <label for="txtFruta">Fruta:</label>
+        <input type="text" name="txtFruta" value="{{listIdDlt[1]}}">
+        
+        <label for="txtTemporada">Temporada:</label>
+        <input type="text" name="txtTemporada" value="{{listIdDlt[2]}}">
+        
+        <label for="txtPrecio">Precio:</label>
+        <input type="number" name="txtPrecio" value="{{listIdDlt[3]}}">
+        
+        <label for="txtStock">Stock:</label>
+        <input type="number" name="txtStock" value="{{listIdDlt[4]}}">
+        
+        <label for="action">Seguro que quiere borrar</label>
+        <button type="submit" name="action" value="delete">Borrar</button>
+        <button type="submit" name="action" value="cancel">Cancelar</button>
+    </form>
+
+    <br>
+   
+</body>
+</html>

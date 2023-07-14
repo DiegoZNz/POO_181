@@ -23,7 +23,7 @@ def index():
     
     cursor.execute("SELECT 1")
     result = cursor.fetchone()
-
+    
     if result:
         return render_template('index.html',listAlbums = QueryAlbums)
     else:
@@ -91,6 +91,5 @@ def delete(id):
             flash('Borrado cancelado')
     return redirect(url_for('index'))
 
-#ejecución del servidor 
 if __name__ =='__main__':
     app.run(port=5000,debug=True)

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Frutas</title>
+</head>
+<body>
+    <br>
+    <br>
+    <a href="/">Volver a la página principal</a>
+    <a href="/buscar">Buscar por nombre</a>
+    <h1>Frutas</h1>
+    <br>
+    {% with mensajes = get_flashed_messages() %} 
+        {% if mensajes %} 
+            {% for msj in mensajes %}
+                <h3> {{msj}} </h3>
+            {% endfor %}
+        {% endif %} 
+    {% endwith %} 
+    <br>
+    <br>
+    <br>
+    <h1>Frutas registradas</h1>
+
+    <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Fruta</th>
+            <th>Temporada</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for fruta in listFrutas %}
+          <tr>
+            <td>{{ fruta[0] }}</td>
+            <td>{{ fruta[1] }}</td>
+            <td>{{ fruta[2] }}</td>
+            <td>{{ fruta[3] }}</td>
+            <td>{{ fruta[4] }}</td>
+            <td>
+              <a href="/edit/{{ fruta[0] }}">Editar</a>
+              <a href="/edit2/{{ fruta[0] }}">Borrar</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      
+</body>
+</html>
