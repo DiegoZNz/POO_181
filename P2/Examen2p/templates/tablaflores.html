@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Flores</title>
+</head>
+<body>
+    <br>
+    <br>
+    <a href="/">Volver a la página principal</a>
+    <h1>Flores</h1>
+    <br>
+    {% with mensajes = get_flashed_messages() %} 
+        {% if mensajes %} 
+            {% for msj in mensajes %}
+                <h3> {{msj}} </h3>
+            {% endfor %}
+        {% endif %} 
+    {% endwith %} 
+    <br>
+    <br>
+    <br>
+    <h1>Flores registradas</h1>
+
+    <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Flor</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for flor in listFlores %}
+          <tr>
+            <td>{{ flor[0] }}</td>
+            <td>{{ flor[1] }}</td>
+            <td>{{ flor[2] }}</td>
+            <td>{{ flor[3] }}</td>
+            <td>
+              <a href="/edit/{{ flor[0] }}">Borrar</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      
+</body>
+</html>

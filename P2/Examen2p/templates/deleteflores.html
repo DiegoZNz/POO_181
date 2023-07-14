@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <title>delete flores</title>
+</head>
+<body>
+   
+    <br>
+    <br>
+    <h1><strong>Seguro que quiere borrar!!!!!!!!!!!!!</strong></h1>
+    <br>
+    <form action="/delete/{{listIdDlt[0]}}" method="POST">
+        <label for="txtFlor">Flor:</label>
+        <input type="text" name="txtFlor" value="{{listIdDlt[1]}}" disabled>
+        
+        <label for="txtCantidad">Cantidad:</label>
+        <input type="text" name="txtCantidad" value="{{listIdDlt[2]}}" disabled>
+        
+        <label for="txtPrecio">Precio:</label>
+        <input type="number" name="txtPrecio" value="{{listIdDlt[3]}}" disabled>
+
+        <button type="submit" name="action" value="delete">Borrar</button>
+        <button type="submit" name="action" value="cancel">Cancelar</button>
+    </form>
+
+    <br>
+   
+</body>
+</html>
