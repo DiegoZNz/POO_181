@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>CRUD Albums</title>
-</head>
-<body>
-    <br>
-    <br>
+{% extends 'plantilla.html'%}
+
+{% block body %}
     <h1>Gestión de albums</h1>
-    <br>
     {% with mensajes = get_flashed_messages() %} 
         {% if mensajes %} 
             {% for msj in mensajes %}
@@ -20,9 +11,8 @@
     {% endwith %} 
     <br>
     <form action="/guardar" method="POST">
-
         <input type="text" name="txtTitulo" placeholder="Escribe tu titulo">
-        <input type="text" name="txtArtista" placeholder="Escribe el nombre del artista">
+        <input type="text" name="txtArtista" placeholder="Escribe el artista">
         <input type="number" name="txtAnio" placeholder="Escribe el año">
         <button type="submit">Guardar</button>
     </form>
@@ -54,6 +44,5 @@
           </tr>
           {% endfor %}
         </tbody>
-      </table>
-</body>
-</html>
+      </table>   
+{% endblock %}
