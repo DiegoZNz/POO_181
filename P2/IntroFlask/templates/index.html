@@ -4,7 +4,13 @@
     {% with mensajes = get_flashed_messages() %} 
     {% if mensajes %} 
         {% for msj in mensajes %}
-            <h3 class="display-5 text-center"> {{msj}} </h3>
+            <script>
+              Swal.fire({
+              text: '{{ msj }}',
+              icon: 'success',
+              confirmButtonText: 'Cool'
+              })
+            </script>
         {% endfor %}
     {% endif %} 
     {% endwith %} 
@@ -12,11 +18,7 @@
     <div class="mt-5 mb-5">
       <h1 class="display-1 text-center">Gestión de albums</h1>
     </div>
-
-
     <div class="container">
-
-    
       <div class="row">
         <div class="col-md-5">
           <div class="card card-body mb-5">

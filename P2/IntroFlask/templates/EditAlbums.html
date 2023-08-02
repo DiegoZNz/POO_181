@@ -1,12 +1,28 @@
 {% extends 'plantilla.html'%}
 {% block body %}
-    <h1>Album a editar</h1>
-    <br>
-    <form action="/update/{{listId[0]}}" method="POST">
-        <input type="text" name="txtTitulo" value="{{listId[1]}}">
-        <input type="text" name="txtArtista" value="{{listId[2]}}">
-        <input type="number" name="txtAnio" value="{{listId[3]}}">
-        <button type="submit">Actualizar</button>
-    </form>
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="mb-4">Album a editar</h1>
+        <form action="/update/{{listId[0]}}" method="POST" class="border p-4 rounded">
+          <div class="form-group">
+            <label for="txtTitulo">Título:</label>
+            <input type="text" name="txtTitulo" class="form-control" value="{{listId[1]}}" required>
+          </div>
+          <div class="form-group">
+            <label for="txtArtista">Artista:</label>
+            <input type="text" name="txtArtista" class="form-control" value="{{listId[2]}}" required>
+          </div>
+          <div class="form-group">
+            <label for="txtAnio">Año de publicación:</label>
+            <input type="number" name="txtAnio" class="form-control" value="{{listId[3]}}" required>
+          </div>
+          <button type="submit" name="action" value="delete" class="btn btn-primary mt-3">Actualizar</button>
+          <a href="/" class="btn btn-danger mt-3"><i class="bi bi-x-circle-fill"></i></a>
+        </form>
+      </div>
+    </div>
+  </div>
+  
 {% endblock %}
 

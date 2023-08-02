@@ -80,9 +80,6 @@ def edit2(id):
 def delete(id):
     if request.method == 'POST':
         if request.form.get('action') == 'delete':
-            varTitulo = request.form['txtTitulo']
-            varArtista = request.form['txtArtista']
-            varAnio = request.form['txtAnio']
             UpdCur = mysql.connection.cursor()
             UpdCur.execute('delete from tbalbums where id = %s', (id,))
             mysql.connection.commit()

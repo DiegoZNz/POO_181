@@ -1,12 +1,29 @@
 {% extends 'plantilla.html'%}
 {% block body %}
-    <h1>Seguro que quieres borrar!!</h1>
-    <br>
-    <form action="/delete/{{listIdDlt[0]}}" method="POST">
-        <input type="text" name="txtTitulo" value="{{listIdDlt[1]}}">
-        <input type="text" name="txtArtista" value="{{listIdDlt[2]}}">
-        <input type="number" name="txtAnio" value="{{listIdDlt[3]}}">
-        <button type="submit" name="action" value="delete">Borrar</button>
-        <button type="submit" name="action" value="cancel">Cancelar</button>
-    </form>
+    <div class="container mt-5">
+        <div class="row">
+        <div class="col-12">
+            <h1 class="mb-4">Seguro que quieres borrar!!</h1>
+            <form action="/delete/{{listIdDlt[0]}}" method="POST" class="border p-4 rounded">
+            <div class="form-group">
+                <label for="txtTitulo">Título:</label>
+                <input type="text" name="txtTitulo" class="form-control" value="{{listIdDlt[1]}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="txtArtista">Artista:</label>
+                <input type="text" name="txtArtista" class="form-control" value="{{listIdDlt[2]}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="txtAnio">Año de publicación:</label>
+                <input type="number" name="txtAnio" class="form-control" value="{{listIdDlt[3]}}" readonly>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="submit" name="action" value="delete" class="btn btn-danger mt-3">Borrar</button>
+                <button type="submit" name="action" value="cancel" class="btn btn-secondary mt-3">Cancelar</button>
+            </div>
+            </form>
+        </div>
+        </div>
+    </div>
+  
 {% endblock %}
